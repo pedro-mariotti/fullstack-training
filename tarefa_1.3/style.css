@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: blueviolet;
+}
+main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background-color: blue;
+}
+section{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(47, 107, 56);
+}
+.sq, .sqi {
+    background-color: red;
+    width: 25%;
+}   
+.sqi {
+    background: none;
+}
+#crisscross {
+    display:grid;
+    grid-template-columns: auto auto auto;
+    gap: 5px;
+    div {
+        background-color: aquamarine;
+        width: 100%;
+        height: 100%;
+    }
+}
