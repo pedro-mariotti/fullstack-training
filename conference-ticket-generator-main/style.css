@@ -5,6 +5,7 @@
   color: white;
 }
 body {
+  position: relative;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -36,6 +37,8 @@ main {
 }
 form {
   display: flex;
+  width: 100%;
+  padding: 10px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -44,25 +47,76 @@ form {
 }
 label {
   display: flex;
-  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  font-size: 20px;
   flex-direction: column;
-  align-items: start;
-  gap: 2px;
+  align-items: center;
+  gap: 15px;
 }
 input {
   width: 100%;
-  border-radius: 15px;
-  padding: 10px;
-  color: black;
+  border-radius: 10px;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  color: white;
+  /* border-width: 1px; */
+  background-color: hsla(246, 15%, 58%, 0.308);
 }
 .dragdrop {
   background-color: hsla(252, 6%, 83%, 0.158);
   border-radius: 15px;
+
   border: 1px dashed hsl(252, 6%, 83%);
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   text-align: center;
+}
+.dragdrop-info {
+  gap: 2px;
+  display: flex;
+  font-size: 12px;
+  color: black;
 }
 .pfp {
   text-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.submit-button {
+  border: none;
+  cursor: pointer;
+  background-color: hsl(7, 88%, 67%);
+}
+.bg-img-1 {
+  position: absolute;
+  z-index: -10;
+  left: 0%;
+  bottom: 0%;
+}
+.bg-img-2 {
+  position: absolute;
+  z-index: -10;
+  right: 0%;
+  top: 0%;
+}
+.bg-img-3 {
+  position: absolute;
+  width: 100%;
+  z-index: -10;
+  left: 0%;
+  bottom: 0%;
+}
+.bg-img-4 {
+  position: absolute;
+  top: -15%;
+  left: 10%;
+  z-index: -10;
+}
+.bg-img-5 {
+  position: absolute;
+  z-index: -10;
+  right: 10%;
 }
