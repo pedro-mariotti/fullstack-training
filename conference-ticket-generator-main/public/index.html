@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link
       rel="shortcut icon"
-      href="./public/logo-mark.svg"
+      href="./assets/logo-mark.svg"
       type="image/x-icon"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,26 +30,40 @@
     <main>
       <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
       <h4>Secure your spot at next year's biggest coding conference.</h4>
-      <form action="">
+      <form id="user-form" action="">
         <div class="pfp">
           <p>Upload Avatar</p>
           <div class="dragdrop">
-            <img src="./public/icon-upload.svg" alt="upload image icon" />
+            <img src="./assets/icon-upload.svg" alt="upload image icon" />
             <p>Drag and drop or click to upload</p>
+            <input class="pfp-upload" type="file" name="profilepic" />
           </div>
           <div class="dragdrop-info">
-            <img src="./public/icon-info.svg" alt="information icon" />
+            <img src="./assets/icon-info.svg" alt="information icon" />
             <p>Upload your photo (JPG or PNG, max size: 500KB).</p>
           </div>
         </div>
-        <label>Full Name <input type="text" placeholder="John Doe" /></label>
         <label
-          >Email Address <input type="text" placeholder="example@email.com"
+          >Full Name
+          <input type="text" placeholder="John Doe" name="nome" required
         /></label>
         <label
-          >Github Username <input type="text" placeholder=" @yourusername"
+          >Email Address
+          <input
+            type="text"
+            placeholder="example@email.com"
+            name="email"
+            required
         /></label>
-        <input class="submit-button" type="button" value="Generate My Ticket" />
+        <label
+          >Github Username
+          <input
+            type="text"
+            placeholder="@yourusername"
+            required
+            name="username"
+        /></label>
+        <input class="submit-button" type="submit" value="Generate My Ticket" />
       </form>
       <!-- Form ends -->
 
@@ -67,32 +81,33 @@
     <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Pedro Mariotti</a>.
     </footer>
     <img
-      src="./public/pattern-squiggly-line-bottom-desktop.svg"
+      src="./assets/pattern-squiggly-line-bottom-desktop.svg"
       alt="background squiggly lines"
       class="bg-img-1"
     />
     <img
-      src="./public/pattern-squiggly-line-top.svg"
+      src="./assets/pattern-squiggly-line-top.svg"
       alt="background squiggly lines"
       class="bg-img-2"
     />
     <img
-      src="./public/pattern-lines.svg"
+      src="./assets/pattern-lines.svg"
       alt="background squiggly lines"
       class="bg-img-3"
     />
     <img
-      src="./public/pattern-circle.svg"
+      src="./assets/pattern-circle.svg"
       alt="background squiggly lines"
       class="bg-img-4"
     />
     <img
-      src="./public/pattern-circle.svg"
+      src="./assets/pattern-circle.svg"
       alt="background squiggly lines"
       class="bg-img-5"
     />
+    <script src="index.js"></script>
   </body>
 </html>

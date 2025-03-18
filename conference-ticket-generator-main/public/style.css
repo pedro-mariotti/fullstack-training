@@ -7,12 +7,13 @@
 body {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
+  max-height: max-content;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-image: url("./public/background-desktop.png");
+  background-image: url("./assets/background-desktop.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -34,6 +35,7 @@ main {
   justify-content: center;
   text-align: center;
   gap: 20px;
+  padding: 0.4rem;
 }
 form {
   display: flex;
@@ -66,7 +68,7 @@ input {
 .dragdrop {
   background-color: hsla(252, 6%, 83%, 0.158);
   border-radius: 15px;
-
+  position: relative;
   border: 1px dashed hsl(252, 6%, 83%);
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -119,4 +121,11 @@ input {
   position: absolute;
   z-index: -10;
   right: 10%;
+}
+.pfp-upload {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: none;
 }
