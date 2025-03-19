@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -34,9 +34,27 @@
         <div class="pfp">
           <p>Upload Avatar</p>
           <div class="dragdrop">
-            <img src="./assets/icon-upload.svg" alt="upload image icon" />
-            <p>Drag and drop or click to upload</p>
-            <input class="pfp-upload" type="file" name="profilepic" />
+            <div id="unfilled-pfp">
+              <img src="./assets/icon-upload.svg" alt="upload image icon" />
+              <p>Drag and drop or click to upload</p>
+              <input
+                class="pfp-upload"
+                id="pfp-upload"
+                type="file"
+                name="profilepic"
+              />
+            </div>
+            <div class="filled-pfp" id="filled-pfp" style="display: none">
+              <img
+                id="pfp-temp-image"
+                src="./assets/image-avatar.jpg"
+                alt="profile picture"
+              />
+              <div>
+                <button id="remove-pfp">Remove image</button>
+                <button>Change image</button>
+              </div>
+            </div>
           </div>
           <div class="dragdrop-info">
             <img src="./assets/icon-info.svg" alt="information icon" />
@@ -57,18 +75,14 @@
         /></label>
         <label
           >Github Username
-          <input
-            type="text"
-            placeholder="@yourusername"
-            required
-            name="username"
+          <input type="text" placeholder="@yourusername" required name="github"
         /></label>
         <input class="submit-button" type="submit" value="Generate My Ticket" />
       </form>
       <!-- Form ends -->
 
       <!-- Generated tickets starts -->
-      <div style="display: none">
+      <div id="ticket" style="display: none">
         Congrats,
         <!-- Full Name -->! Your ticket is ready. We've emailed your ticket to
         <!-- Email Address -->
