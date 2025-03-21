@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link
       rel="shortcut icon"
-      href="./assets/logo-mark.svg"
+      href="./assets/favicon-32x32.png"
       type="image/x-icon"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,9 +28,13 @@
   <body>
     <!-- Form starts -->
     <main>
-      <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
-      <h4>Secure your spot at next year's biggest coding conference.</h4>
+      <header>
+        <img src="./assets/logo-mark.svg" alt="" />
+        <h1>Coding Conf</h1>
+      </header>
       <form id="user-form" action="">
+        <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+        <h4>Secure your spot at next year's biggest coding conference.</h4>
         <div class="pfp">
           <p>Upload Avatar</p>
           <div class="dragdrop">
@@ -51,8 +55,8 @@
                 alt="profile picture"
               />
               <div>
-                <button id="remove-pfp">Remove image</button>
-                <button>Change image</button>
+                <button type="button" id="remove-pfp">Remove image</button>
+                <button type="button" id="change-pfp">Change image</button>
               </div>
             </div>
           </div>
@@ -68,7 +72,7 @@
         <label
           >Email Address
           <input
-            type="text"
+            type="email"
             placeholder="example@email.com"
             name="email"
             required
@@ -82,12 +86,49 @@
       <!-- Form ends -->
 
       <!-- Generated tickets starts -->
-      <div id="ticket" style="display: none">
-        Congrats,
-        <!-- Full Name -->! Your ticket is ready. We've emailed your ticket to
-        <!-- Email Address -->
-        and will send updates in the run up to the event. Coding Conf Jan 31,
-        2025 / Austin, TX
+      <div id="ticket-section" class="ticket-section">
+        <h1>
+          Congrats,<span class="text-user-name" id="text-user-name-title"
+            >[NOME]</span
+          >! Your ticket is ready.
+        </h1>
+        <h2>
+          We've emailed your ticket to <span id="text-email">[EMAIL]</span> and
+          will send updates in the run up to the event.
+        </h2>
+        <div class="ticket-container">
+          <div class="ticket-header">
+            <img src="./assets/logo-mark.svg" alt="logo" />
+            <div class="ticket-title">
+              <h3 id="h3-teimoso">Coding Conf</h3>
+              <p>Jan 31, 2025 / Austin, TX</p>
+            </div>
+          </div>
+          <div class="ticket-user">
+            <img
+              class="ticket-avatar"
+              id="ticket-avatar"
+              src="./assets/image-avatar.jpg"
+              alt="avatar"
+            />
+            <div class="ticket-user-info">
+              <p class="text-user-name">[NOME]</p>
+              <div class="ticket-github">
+                <img
+                  src="./assets/icon-github.svg"
+                  alt="github icon"
+                  id="ticket-user-image"
+                />
+                <p id="text-github">[USER]</p>
+              </div>
+            </div>
+          </div>
+          <!-- <img
+            src="./assets/pattern-ticket.png"
+            alt="ticket background"
+            class="ticket-background"
+          /> -->
+        </div>
       </div>
 
       <!-- Generated tickets ends -->
@@ -100,27 +141,38 @@
     <img
       src="./assets/pattern-squiggly-line-bottom-desktop.svg"
       alt="background squiggly lines"
-      class="bg-img-1"
+      id="bg-img-1"
+      class="bg-img"
     />
     <img
       src="./assets/pattern-squiggly-line-top.svg"
       alt="background squiggly lines"
-      class="bg-img-2"
+      id="bg-img-2"
+      class="bg-img"
     />
     <img
       src="./assets/pattern-lines.svg"
       alt="background squiggly lines"
-      class="bg-img-3"
+      id="bg-img-3"
+      class="bg-img"
     />
     <img
       src="./assets/pattern-circle.svg"
       alt="background squiggly lines"
-      class="bg-img-4"
+      id="bg-img-4"
+      class="bg-img"
     />
     <img
       src="./assets/pattern-circle.svg"
       alt="background squiggly lines"
-      class="bg-img-5"
+      id="bg-img-5"
+      class="bg-img"
+    />
+    <img
+      src="./assets/pattern-squiggly-line-bottom-mobile-tablet.svg"
+      alt="background squiggly lines"
+      id="bg-img-mobile"
+      class="bg-img"
     />
     <script src="index.js"></script>
   </body>

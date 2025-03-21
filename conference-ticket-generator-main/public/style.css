@@ -4,6 +4,10 @@
   font-family: "Inconsolata";
   color: white;
 }
+header {
+  display: flex;
+  gap: 2rem;
+}
 body {
   position: relative;
   width: 100vw;
@@ -11,7 +15,6 @@ body {
   max-height: max-content;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
   background-image: url("./assets/background-desktop.png");
   background-size: cover;
@@ -29,13 +32,13 @@ footer {
 }
 main {
   width: 33%;
+  padding-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   gap: 20px;
-  padding: 0.4rem;
 }
 form {
   display: flex;
@@ -59,11 +62,17 @@ label {
 input {
   width: 100%;
   border-radius: 10px;
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
+  border: 1px;
+  padding: 0.7rem;
   color: white;
   /* border-width: 1px; */
   background-color: hsla(246, 15%, 58%, 0.308);
+}
+input:invalid {
+  border: 1px solid red;
+}
+input::selection {
+  border: none;
 }
 .dragdrop {
   background-color: hsla(252, 6%, 83%, 0.158);
@@ -92,35 +101,41 @@ input {
   cursor: pointer;
   background-color: hsl(7, 88%, 67%);
 }
-.bg-img-1 {
+.submit-button:hover {
+  background-color: hsl(7, 71%, 60%);
+}
+#bg-img-1 {
   position: absolute;
   z-index: -10;
   left: 0%;
   bottom: 0%;
 }
-.bg-img-2 {
+#bg-img-2 {
   position: absolute;
   z-index: -10;
   right: 0%;
   top: 0%;
 }
-.bg-img-3 {
+#bg-img-3 {
   position: absolute;
   width: 100%;
   z-index: -10;
   left: 0%;
   bottom: 0%;
 }
-.bg-img-4 {
+#bg-img-4 {
   position: absolute;
   top: -15%;
   left: 10%;
   z-index: -10;
 }
-.bg-img-5 {
+#bg-img-5 {
   position: absolute;
   z-index: -10;
   right: 10%;
+}
+#bg-img-mobile {
+  display: none;
 }
 .pfp-upload {
   position: absolute;
@@ -128,6 +143,10 @@ input {
   left: 0;
   height: 100%;
   background: none;
+  opacity: 0; /* Torna o elemento invisível */
+  pointer-events: auto; /* Mantém ele interativo */
+  visibility: visible;
+  cursor: pointer;
 }
 .filled-pfp {
   display: flex;
@@ -150,5 +169,146 @@ input {
   div {
     display: flex;
     gap: 10px;
+  }
+}
+.ticket-section {
+  display: none;
+  flex-direction: column;
+  gap: 5rem;
+  height: 100%;
+}
+.ticket-title {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+
+  gap: 1rem;
+  h3 {
+    font-size: 32px;
+  }
+  p {
+    color: hsl(245, 15%, 58%);
+  }
+}
+.ticket-header {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 2rem;
+
+  p {
+    width: fit-content;
+  }
+  img {
+    width: 2rem;
+  }
+}
+
+.ticket-container {
+  display: flex;
+  position: relative;
+  align-self: center;
+  flex-direction: column;
+  justify-content: center;
+  background: url("./assets/pattern-ticket.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  padding: 2rem;
+  gap: 2rem;
+  width: 25rem;
+  height: 100%;
+
+  .ticket-background {
+    position: absolute;
+    width: 100px;
+    height: 1000px;
+    right: 0;
+    top: 0;
+    z-index: -10;
+  }
+}
+
+.ticket-user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  p {
+    font-weight: bold;
+    font-size: 24px;
+  }
+  .ticket-avatar {
+    width: 7rem;
+    border-radius: 5px;
+  }
+}
+.ticket-github {
+  display: flex;
+  align-items: center;
+}
+.ticket-user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+#text-email {
+  color: hsl(7, 71%, 60%);
+}
+#text-user-name-title {
+  background: linear-gradient(90deg, hsl(7, 71%, 60%), hsl(0, 0%, 100%));
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (max-width: 885px) {
+  body {
+    background-image: url("./assets/background-mobile.png");
+    position: relative;
+    /* height: max-content; */
+  }
+  .bg-img {
+    display: none;
+  }
+
+  #bg-img-mobile {
+    display: block;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 280px;
+    z-index: -10;
+  }
+  #bg-img-2 {
+    display: block;
+    position: absolute;
+    width: 200px;
+    z-index: -10;
+    right: 0%;
+    top: 0%;
+  }
+  form,
+  main {
+    width: 90%;
+  }
+  .ticket-section {
+    width: 90%;
+    p {
+      font-size: 12px;
+    }
+  }
+  .ticket-container {
+    height: 100%;
+    max-width: 100%;
+    padding: 1rem;
+  }
+  #h3-teimoso {
+    font-size: 16px;
+  }
+  #ticket-avatar {
+    width: 4rem;
+    border-radius: 5px;
   }
 }
