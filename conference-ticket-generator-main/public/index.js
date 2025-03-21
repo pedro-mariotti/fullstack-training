@@ -1,7 +1,6 @@
 console.log("Hello world");
 
 const userForm = document.getElementById("user-form");
-const filledTicked = document.getElementById("ticket");
 
 const userImageInput = document.getElementById("pfp-upload");
 const filledUserImageInputDiv = document.getElementById("filled-pfp");
@@ -28,7 +27,6 @@ userForm.addEventListener("submit", (e) => {
   userGithub = formData.get("github");
   userProfilePic = formData.get("profilepic");
 
-  // Se uma imagem foi selecionada
   if (userProfilePic) {
     const reader = new FileReader();
     reader.onload = function (event) {
@@ -68,5 +66,5 @@ removePfpButton.onclick = () => {
   filledUserImageInputDiv.style.display = "none";
 };
 document.getElementById("change-pfp").addEventListener("click", () => {
-  userImageInput.click(); // Ativa o input de upload "escondido"
+  userImageInput.click();
 });

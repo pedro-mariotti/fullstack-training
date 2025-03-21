@@ -65,7 +65,6 @@ input {
   border: 1px;
   padding: 0.7rem;
   color: white;
-  /* border-width: 1px; */
   background-color: hsla(246, 15%, 58%, 0.308);
 }
 input:invalid {
@@ -143,8 +142,8 @@ input::selection {
   left: 0;
   height: 100%;
   background: none;
-  opacity: 0; /* Torna o elemento invisível */
-  pointer-events: auto; /* Mantém ele interativo */
+  opacity: 0;
+  pointer-events: auto;
   visibility: visible;
   cursor: pointer;
 }
